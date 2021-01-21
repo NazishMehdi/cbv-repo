@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends 'cbvapp/parent.html' %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% block for_child %}
+    <h1 style="color=red"> Student Form</h1>
+    <form method="post">
+      {{form.as_p}}
+      {% csrf_token %}
+      <input type="submit" class="btn btn-lg btn-primary" value="Insert Record">
+    </form>
+    {% endblock %}
+  </body>
+</html>
